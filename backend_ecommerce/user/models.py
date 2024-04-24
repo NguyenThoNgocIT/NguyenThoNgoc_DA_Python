@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.contrib.auth.models import AbstractUser
+
 # Kế thừa AbstractUser để có thể thêm các trường vào User model
 # Không thể dùng từ khóa User nên sẽ thay thế bằng UserAccount
 
@@ -15,5 +16,5 @@ class UserAccount(AbstractUser):
     gender = models.CharField(
         max_length=6,
         # Định nghĩa ENUM
-        choices=[('MALE', 'MALE'), ('FEMALE', 'FEMALE'), ('OTHER', 'OTHER')]
+        choices=[("MALE", "MALE"), ("FEMALE", "FEMALE"), ("OTHER", "OTHER")],
     )
